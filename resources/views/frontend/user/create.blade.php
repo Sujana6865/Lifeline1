@@ -1,8 +1,8 @@
 @extends('frontend.template.app')
 
 @section('content')
-    <a href="" class="float-right pt-5"><p>Back</p></a>
-    <div class="mt-5">
+    <a href="" class="float-right"><p>Back</p></a>
+    <div class=" p-md-5">
         <h2>Register Now</h2>
         <p>
             Register and be life savier
@@ -33,24 +33,25 @@
                     <input id="loc" class="form-control" type="text" name="loc">
                 </div>
                 <div class="form-group ">
-                    <label for="phone">Phone Number</label>
-                    <input id="phone" class="form-control" type="text" name="phone">
+                    <label for="mobile">Phone Number</label>
+                    <input id="mobile" class="form-control" type="text" name="mobile">
                 </div>
                 <div class="form-group ">
                     <label for="email">Email</label>
                     <input id="email" class="form-control" type="text" name="email">
                 </div>
                 <div class="form-group ">
-                    <label for="email">Password</label>
-                    <input id="email" class="form-control" type="text" name="email">
+                    <label for="password">Password</label>
+                    <input id="password" class="form-control" type="text" name="password">
                 </div>
                 <button type="submit" class="btn btn-primary">Register Now</button>
             </form>
         </div>
+        <div  class="mt-md-2">
+            <p>Already Registered ? | <a href="">Log In</a></p>
+        </div>
     </div>
     
-    <div class="mt-2">
-        <p>Already Registered ? | <a href="">Log In</a></p>
-    </div>
+   
 </div>
 @endsection
