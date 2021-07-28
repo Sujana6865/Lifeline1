@@ -15,6 +15,8 @@
                                 <td>#</td>
                                 <td>Name</td>
                                 <td>Blood group</td>
+                                <td>location</td>
+                                <td>Mobile</td>
                             </th>
                         </thead>
                         <tbody>
