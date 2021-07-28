@@ -27,6 +27,11 @@ Route::get('/finddonor', function () {
     return view('frontend.finddonor.fdonor');
 });
 
+Route::get('/donorlist', function () {
+    return view('frontend.donor list.donors');
+});
+
+
 Auth::routes();
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');

@@ -36,14 +36,9 @@
             <div class="form-group ">
                 <label for="location">Location</label>
                 <select id="location" class="form-control" name="location">
-                    <option value="Dharan-1">Dharan-1</option>
-                    <option value="Dharan-2">Dharan-2</option>
-                    <option value="Dharan-3">Dharan-3</option>
-                    <option value="Dharan-4">Dharan-4</option>
-                    <option value="Dharan-5">Dharan-5</option>
-                    <option value="Dharan-5">Dharan-6</option>
-                    <option value="Dharan-7">Dharan-7</option>
-                    <option value="Dharan-8">Dharan-8</option>
+                    <option value="Dharan">Dharan</option>
+                    <option value="Itahari">Itahari</option>
+                    <option value="Biratnagar">Biratnagar</option>
                 </select>
             </div>
             <!--<div class="form-group ">
@@ -53,7 +48,9 @@
             -->
             <div class="row">
                 <div class="col-md-3">
-                    <button type="submit" class="newbutton  px-md-4">Search</button>
+                    <a href="/donorlist">
+                        <button type="submit" class="newbutton  px-md-4">Search</button>
+                    </a>
                 </div>
                 <div class="col-md-9">
                     <a href="/">
