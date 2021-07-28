@@ -1,4 +1,10 @@
 @extends('backend.template.app')
+@section('title')
+    Blood Bank
+@endsection
+@section('subtitle')
+    Blood Bank
+@endsection
 @section('content')
     <div class="container">
         <div class="row">
@@ -6,7 +12,7 @@
                 <div class="card">
                     <!--tips: add .text-center,.text-right to the .card to change card text alignment-->
                     <div class="card-header">
-                        <div class="btn btn-danger">All Users</div>
+                        <div class="btn btn-danger"><i class="nav-icon fas fa-tint"></i> Blood Bank List</div>
                     </div>
                     <div class="card-body">
                         <table class="table table-bordered table-striped table-sm">
@@ -20,15 +26,28 @@
                                 </tr>
                             </thead>
                             <tbody>
-                                @foreach ($bbanks as $user)
+                                @foreach ($bbanks as $bbank)
                                 <tr>
-                                    <td>{{ $user->id }}</td>
-                                    <td>{{ $user->name }}</td>
-                                    <td>{{ $user->location }}</td>
-                                    <td>{{ $user->no }}</td>
+                                    <td>{{ $bbank->id }}</td>
+                                    <td>{{ $bbank->name }}</td>
+                                    <td>{{ $bbank->location }}</td>
+                                    <td>{{ $bbank->no }}</td>
                                     <td>
-                                        <a href="" class="btn btn-success">edit</a>
-                                        <a href="" class="btn btn-primary">show</a>
+                                        <div class="row">
+                                            <div class="col-2">
+                                                <a href="/bbank/{{ $bbank->id }}/edit" class="btn btn-success">edit</a>
+                                            </div>
+                                            <div class="col-2">
+                                                <a href="/bbank/{{ $bbank->id }}" class="btn btn-primary">show</a>
+                                            </div>
+                                            <div class="col-2">
+                                                <form action="/bbank/{{ $bbank->id }}" method="post">
+                                                    @csrf
+                                                    @method('delete')
+                                                    <button type="submit" class="btn btn-danger">Delete</button>
+                                                </form>
+                                            </div>
+                                        </div>
                                     </td>
                                 </tr>
                                 @endforeach

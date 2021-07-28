@@ -1,4 +1,10 @@
 @extends('backend.template.app')
+@section('title')
+    Users
+@endsection
+@section('subtitle')
+    Users
+@endsection
 @section('content')
 <div class="container">
     <div class="row">
@@ -6,7 +12,7 @@
             <div class="card">
                 <!--tips: add .text-center,.text-right to the .card to change card text alignment-->
                 <div class="card-header">
-                    <div class="btn btn-danger">All Users</div>
+                    <div class="btn btn-danger">User List</div>
                 </div>
                 <div class="card-body">
                     <table class="table table-bordered table-striped table-sm">

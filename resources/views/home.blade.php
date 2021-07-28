@@ -1,5 +1,9 @@
 @extends('backend.template.app')
-
+@section('title')
+    Dashboard
+@endsection
+@section('subtitle')
+    Dashboard
 @section('content')
 <div class="container">
     <div class="row justify-content-center">

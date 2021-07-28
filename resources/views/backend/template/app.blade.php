@@ -25,6 +25,8 @@
   <link rel="stylesheet" href="{{ asset('plugins/daterangepicker/daterangepicker.css') }}">
   <!-- summernote -->
   <link rel="stylesheet" href="{{ asset('plugins/summernote/summernote-bs4.css') }}">
+  {{-- css --}}
+  <link rel="stylesheet" href="{{ asset('css/app.css') }}">
   <!-- Google Font: Source Sans Pro -->
   <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700" rel="stylesheet">
 </head>
@@ -39,7 +41,7 @@
         <a class="nav-link" data-widget="pushmenu" href="#" role="button"><i class="fas fa-bars"></i></a>
       </li>
       <li class="nav-item d-none d-sm-inline-block">
-        <a href="index3.html" class="nav-link">Home</a>
+        <a href="/home" class="nav-link">Home</a>
       </li>
       <li class="nav-item d-none d-sm-inline-block">
         <a href="#" class="nav-link">Contact</a>
@@ -171,7 +173,7 @@
           <img src="{{ asset('dist/img/user2-160x160.jpg') }}" class="img-circle elevation-2" alt="User Image">
         </div>
         <div class="info">
-          <a href="#" class="d-block">Alexander Pierce</a>
+          <a href="#" class="d-block">{{ Auth::user()->name }}</a>
         </div>
       </div>
 
@@ -180,7 +182,7 @@
         <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu" data-accordion="false">
           <!-- Add icons to the links using the .nav-icon class
                with font-awesome or any other icon font library -->
-          <li class="nav-item">
+          <li class="nav-item has-treeview">
             <a href="/home" class="nav-link">
               <i class="nav-icon fas fa-th"></i>
               <p>Dashboard</p>
@@ -192,24 +194,66 @@
               <p>Users</p>
             </a>
           </li>
-          <li class="nav-item">
-            <a href="/ambulance" class="nav-link">
+          <li class="nav-item has-treeview">
+            <a href="#" class="nav-link">
+              <p></p>
+              <i class="fas fa-hospital-user"></i>
+               <p>
+                  <p> </p> Blood Bank
+                <i class="right fas fa-angle-left"></i>
+              </p>
+            </a>
+            <ul class="nav nav-treeview">
+              <li class="nav-item">
+                <a href="/bbank/create" class="nav-link">
+                  <i class="far fa-circle nav-icon"></i>
+                  <p>Add New</p>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a href="/bbank" class="nav-link">
+                  <i class="far fa-circle nav-icon"></i>
+                  <p>Blood Bank List</p>
+                </a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-item has-treeview">
+            <a href="#" class="nav-link">
               <i class="nav-icon fas fa-ambulance"></i>
-              <p>Ambulance</p>
+              <p>
+                Ambulance
+                <i class="right fas fa-angle-left"></i>
+              </p>
             </a>
+            <ul class="nav nav-treeview">
+              <li class="nav-item">
+                <a href="/ambulance/create" class="nav-link">
+                  <i class="far fa-circle nav-icon"></i>
+                  <p>Add New</p>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a href="/ambulance" class="nav-link">
+                  <i class="far fa-circle nav-icon"></i>
+                  <p>Ambulance List</p>
+                </a>
+              </li>
+            </ul>
           </li>
+         
           <li class="nav-item">
-            <a href="/bbank" class="nav-link">
-              <i class="nav-icon fas fa-tint"></i>
-              <p>Blood Bank</p>
+            <a class="nav-link" href="{{ route('logout') }}"
+               onclick="event.preventDefault();
+                             document.getElementById('logout-form').submit();">
+                             <i class="nav-icon fas fa-sign-out-alt"></i>
+                {{ __('Logout') }}
             </a>
-          </li>
-          <li class="nav-item">
-            <a href="/user" class="nav-link">
-              <i class="nav-icon fas fa-sign-out-alt"></i>
-              <p>Logout</p>
-            </a>
-          </li>
+
+            <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
+                @csrf
+            </form>
+        </li>
         </ul>
       </nav>
       <!-- /.sidebar-menu -->
@@ -224,12 +268,12 @@
       <div class="container-fluid">
         <div class="row mb-2">
           <div class="col-sm-6">
-            <h1 class="m-0 text-dark">Dashboard</h1>
+            <h1 class="m-0 text-dark">@yield('title')</h1>
           </div><!-- /.col -->
           <div class="col-sm-6">
             <ol class="breadcrumb float-sm-right">
-              <li class="breadcrumb-item"><a href="#">Home</a></li>
-              <li class="breadcrumb-item active">Dashboard v1</li>
+              <li class="breadcrumb-item"><a href="/home">Home</a></li>
+              <li class="breadcrumb-item active">@yield('subtitle')</li>
             </ol>
           </div><!-- /.col -->
         </div><!-- /.row -->
@@ -292,5 +336,6 @@
 <script src="{{ asset('dist/js/pages/dashboard.js') }}"></script>
 <!-- AdminLTE for demo purposes -->
 <script src="{{ asset('dist/js/demo.js') }}"></script>
+<script src="{{ asset('js/app.js') }}"></script>
 </body>
 </html>
