@@ -187,25 +187,19 @@
             </a>
           </li>
           <li class="nav-item">
-            <a href="/user" class="nav-link">
+            <a href="/users" class="nav-link">
               <i class="nav-icon fas fa-user"></i>
               <p>Users</p>
             </a>
           </li>
           <li class="nav-item">
-            <a href="/user" class="nav-link">
-              <i class="nav-icon fas fa-calendar-check"></i>
-              <p>Events</p>
-            </a>
-          </li>
-          <li class="nav-item">
-            <a href="/user" class="nav-link">
+            <a href="/ambulance" class="nav-link">
               <i class="nav-icon fas fa-ambulance"></i>
               <p>Ambulance</p>
             </a>
           </li>
           <li class="nav-item">
-            <a href="/user" class="nav-link">
+            <a href="/bloodbank" class="nav-link">
               <i class="nav-icon fas fa-tint"></i>
               <p>Blood Bank</p>
             </a>

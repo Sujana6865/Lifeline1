@@ -8,7 +8,7 @@
             Register and be life savier
         </p>
         <div>
-            <form action="" method="post">
+            <form action="user" method="post">
                 @csrf
                 <div class="form-group">
                     <label for="name">Name</label>
