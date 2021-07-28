@@ -1,4 +1,4 @@
-@extends('admin.template.app')
+@extends('backend.template.app')
 @section('content')
 <div class="container">
     <div class="row">
@@ -11,17 +11,34 @@
                 <div class="card-body">
                     <table class="table table-bordered table-striped table-sm">
                         <thead>
-                            <th>
-                                <td>#</td>
-                                <td>Name</td>
-                                <td>Blood group</td>
-                                <td>location</td>
-                                <td>Mobile</td>
-                                <td>Mobile</td>
-                                <td>Action</td>
-                            </th>
+                            <tr>
+                                <th>#</th>
+                                <th>Name</th>
+                                <th>Blood group</th>
+                                <th>location</th>
+                                <th>Mobile</th>
+                                <th>Email</th>
+                                <th>Action</th>
+                            </tr>
                         </thead>
                         <tbody>
+                            @foreach ($users as $user)
+                            @if ($user->is_admin == 0)
+                                <tr>
+                                    <td>{{ $user->id }}</td>
+                                    <td>{{ $user->name }}</td>
+                                    <td>{{ $user->blood }}</td>
+                                    <td>{{ $user->location }}</td>
+                                    <td>{{ $user->mobile }}</td>
+                                    <td>{{ $user->email }}</td>
+                                    <td>
+                                        <a href="" class="btn btn-success">edit</a>
+                                        <a href="" class="btn btn-primary">show</a>
+                                    </td>
+                                </tr>
+                                
+                            @endif
+                            @endforeach
                         </tbody>
                     </table>
                 </div>

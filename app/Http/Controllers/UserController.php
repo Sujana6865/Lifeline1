@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Foundation\Auth\User;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Hash;
 
 class UserController extends Controller
 {
@@ -38,11 +39,12 @@ class UserController extends Controller
     {
         $users = new User();
         $users->name = $request->name;
-        $users->password = $request->password;
+        $users->password = Hash::make($request->password);
         $users->email = $request->email;
         $users->mobile = $request->mobile;
         $users->blood = $request->blood;
         $users->location = $request->location;
+        $users->is_admin = $request->is_admin;
         $users->save();
         return redirect()->back();
     }
