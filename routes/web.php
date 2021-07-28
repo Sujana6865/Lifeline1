@@ -1,5 +1,7 @@
 <?php
 
+use App\Http\Controllers\AmbulanceController;
+use App\Http\Controllers\BloodbankController;
 use App\Http\Controllers\UserController;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
@@ -38,3 +40,9 @@ Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name
 
 // usercontroller
 Route::resource('user', UserController::class);
+
+// ambulancecontroller
+Route::resource('ambulance', AmbulanceController::class);
+
+// bloodbankcontroller
+Route::resource('bbank', BloodbankController::class);
