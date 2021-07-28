@@ -17,6 +17,8 @@
                                 <td>Blood group</td>
                                 <td>location</td>
                                 <td>Mobile</td>
+                                <td>Mobile</td>
+                                <td>Action</td>
                             </th>
                         </thead>
                         <tbody>
