@@ -16,7 +16,7 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return view('frontend.user.create');
+    return view('frontend.find donor.fdonor');
 });
 
 Auth::routes();
