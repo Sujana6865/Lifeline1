@@ -16,7 +16,11 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return view('frontend.find donor.fdonor');
+    return view('frontend.home');
+});
+
+Route::get('/userregister', function () {
+    return view('frontend.user.create');
 });
 
 Auth::routes();

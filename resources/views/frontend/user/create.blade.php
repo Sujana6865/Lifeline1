@@ -49,7 +49,7 @@
             </form>
         </div>
         <div  class="mt-md-2">
-            <p>Already Registered ? | <a href="">Log In</a></p>
+            <p>Already Registered ? | <a href="/login">Log In</a></p>
         </div>
     </div>
     
