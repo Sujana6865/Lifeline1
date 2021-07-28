@@ -44,6 +44,7 @@
                     <label for="password">Password</label>
                     <input id="password" class="form-control" type="text" name="password">
                 </div>
+                <input type="hidden" name="is admin" value="0">
                 <button type="submit" class="btn btn-primary">Register Now</button>
             </form>
         </div>
