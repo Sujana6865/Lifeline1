@@ -18,13 +18,13 @@
 </head>
 <body>
     <div class="container">
-        <div class="row">
-            <div class="first col-md-5">
+        <div class="row" style="height:100vh">
+            <div class="first col-5 mh-100" >
                 <div class="logo p-md-5 text-center">
                     <a href=""><img src="" alt=""><h1>LifeLine</h1></a>
                 </div>
             </div>
-            <div class="col-md-7 py-md-5">
+            <div class="col-7 py-sm-5">
                 @yield('content')
             </div>
         </div>

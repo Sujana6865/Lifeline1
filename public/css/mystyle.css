@@ -7,3 +7,16 @@
 {
     color:white;
 }
+
+.newbutton
+{
+    background-color: brown;
+    padding: 5px;
+    border-radius: 5px;
+    color: white;
+}
+
+.newbutton:hover
+{
+    background-color:rgb(218, 84, 84);
+}
