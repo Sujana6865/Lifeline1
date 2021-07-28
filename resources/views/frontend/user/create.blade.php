@@ -1,7 +1,9 @@
 @extends('frontend.template.app')
 
 @section('content')
-    <a href="" class="float-right"><p>Back</p></a>
+    <a href="/">
+        <button type="button" class="float-right btn btn-light">Back</button>
+    </a>
     <div class=" p-md-5">
         <h2>Register Now</h2>
         <p>
@@ -49,7 +51,7 @@
             </form>
         </div>
         <div  class="mt-md-2">
-            <p>Already Registered ? | <a href="/login">Log In</a></p>
+            <p>Already Registered ? | <a href="/login" class="log">Log In</a></p>
         </div>
     </div>
     

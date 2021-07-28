@@ -23,6 +23,10 @@ Route::get('/userregister', function () {
     return view('frontend.user.create');
 });
 
+Route::get('/finddonor', function () {
+    return view('frontend.finddonor.fdonor');
+});
+
 Auth::routes();
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
