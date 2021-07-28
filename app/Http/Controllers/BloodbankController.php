@@ -2,6 +2,8 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Ambulance;
+use App\Models\Bloodbank;
 use Illuminate\Http\Request;
 
 class BloodbankController extends Controller
@@ -13,7 +15,8 @@ class BloodbankController extends Controller
      */
     public function index()
     {
-        //
+        $bbanks = Bloodbank::all();
+        return view('backend.bloodbank.index',compact('bbanks'));
     }
 
     /**
@@ -23,7 +26,7 @@ class BloodbankController extends Controller
      */
     public function create()
     {
-        //
+        return view('backend.bloodbank.create');
     }
 
     /**
@@ -34,7 +37,12 @@ class BloodbankController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $bbank = new Bloodbank();
+        $bbank->name = $request->name;
+        $bbank->no = $request->no;
+        $bbank->location = $request->location;
+        $bbank->save();
+        return redirect()->back();
     }
 
     /**
@@ -45,7 +53,8 @@ class BloodbankController extends Controller
      */
     public function show($id)
     {
-        //
+        $bbank = Bloodbank::find($id);
+        return view('backend.bloodbank.show', compact('bbank'));
     }
 
     /**
@@ -56,7 +65,8 @@ class BloodbankController extends Controller
      */
     public function edit($id)
     {
-        //
+        $bbank = Bloodbank::find($id);
+        return view('backend.bloodbank.edit',compact('bbank'));
     }
 
     /**
@@ -68,7 +78,12 @@ class BloodbankController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        $bbank = Bloodbank::find($id);
+        $bbank->name = $request->name;
+        $bbank->no = $request->no;
+        $bbank->location = $request->location;
+        $bbank->update();
+        return redirect()->back();
     }
 
     /**

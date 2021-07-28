@@ -41,12 +41,12 @@ class UserController extends Controller
         $users->name = $request->name;
         $users->password = Hash::make($request->password);
         $users->email = $request->email;
-        $users->mobile = $request->mobile;
         $users->blood = $request->blood;
+        $users->mobile = $request->mobile;
         $users->location = $request->location;
         $users->is_admin = $request->is_admin;
         $users->save();
-        return redirect()->back();
+        return redirect('user');
     }
 
     /**
@@ -81,7 +81,16 @@ class UserController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        $users = User::find($id);
+        $users->name = $request->name;
+        $users->password = Hash::make($request->password);
+        $users->email = $request->email;
+        $users->mobile = $request->mobile;
+        $users->blood = $request->blood;
+        $users->location = $request->location;
+        $users->is_admin = $request->is_admin;
+        $users->update();
+        return redirect('/user');
     }
 
     /**

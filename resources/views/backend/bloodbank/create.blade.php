@@ -10,6 +10,10 @@
                         <input id="name" class="form-control" type="text" name="name">
                     </div>
                     <div class="form-group">
+                        <label for="location">Location</label>
+                        <input id="location" class="form-control" type="text" name="location">
+                    </div>
+                    <div class="form-group">
                         <label for="no">Phone No.</label>
                         <input id="no" class="form-control" type="text" name="no">
                     </div>
