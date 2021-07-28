@@ -29,8 +29,8 @@
                 </div>
                
                 <div class="form-group ">
-                    <label for="loc">Location</label>
-                    <input id="loc" class="form-control" type="text" name="loc">
+                    <label for="location">Location</label>
+                    <input id="location" class="form-control" type="text" name="location">
                 </div>
                 <div class="form-group ">
                     <label for="mobile">Phone Number</label>
