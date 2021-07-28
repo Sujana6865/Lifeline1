@@ -8,6 +8,11 @@
     color:white;
 }
 
+.logo a:hover
+{
+    text-decoration:none;
+}
+
 .newbutton
 {
     background-color: brown;
@@ -19,4 +24,9 @@
 .newbutton:hover
 {
     background-color:rgb(218, 84, 84);
+}
+
+.log
+{
+    color:brown;
 }

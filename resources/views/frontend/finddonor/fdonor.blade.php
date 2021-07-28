@@ -1,7 +1,9 @@
 @extends('frontend.template.app')
 
 @section('content')
-    <a href="" class="float-right"><p>Register Now</p></a>
+    <a href="/userregister">
+        <button type="button" class="float-right btn btn-light">Register Now</button>
+    </a>
     <div class=" p-md-5">
         <h2>FIND DONOR</h2>
         <p>
@@ -30,12 +32,21 @@
                 </select>
             </div>
            
-            <!--
+            
             <div class="form-group ">
-                <label for="loc">Location</label>
-                <input id="loc" class="form-control" type="text" name="loc">
+                <label for="location">Location</label>
+                <select id="location" class="form-control" name="location">
+                    <option value="Dharan-1">Dharan-1</option>
+                    <option value="Dharan-2">Dharan-2</option>
+                    <option value="Dharan-3">Dharan-3</option>
+                    <option value="Dharan-4">Dharan-4</option>
+                    <option value="Dharan-5">Dharan-5</option>
+                    <option value="Dharan-5">Dharan-6</option>
+                    <option value="Dharan-7">Dharan-7</option>
+                    <option value="Dharan-8">Dharan-8</option>
+                </select>
             </div>
-            <div class="form-group ">
+            <!--<div class="form-group ">
                 <label for="hospital">Hospital</label>
                 <input id="hospital" class="form-control" type="text" name="hospital">
             </div>
@@ -45,7 +56,9 @@
                     <button type="submit" class="newbutton  px-md-4">Search</button>
                 </div>
                 <div class="col-md-9">
-                    <button type="submit" class="newbutton px-md-4">Cancel</button>
+                    <a href="/">
+                        <button type="submit" class="newbutton px-md-4">Cancel</button>
+                    </a>
                 </div>
             </div>
         </form>
