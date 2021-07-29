@@ -8,7 +8,7 @@
 @section('content')
     <div class="container">
         <div class="row">
-            <div class="col-md-7">
+            <div class="col-md-12">
                 <div class="card">
                     <!--tips: add .text-center,.text-right to the .card to change card text alignment-->
                     <div class="card-header">
@@ -19,6 +19,8 @@
                             <thead>
                                 <tr>
                                     <th>#</th>
+                                    <th>Hospital</th>
+                                    <th>Location</th>
                                     <th>Phone</th>
                                     <th>Action</th>
                                 </tr>
@@ -27,6 +29,8 @@
                                 @foreach ($ambulances as $ambulance)
                                 <tr>
                                     <td>{{ $ambulance->id }}</td>
+                                    <td>{{ $ambulance->name }}</td>
+                                    <td>{{ $ambulance->location }}</td>
                                     <td>{{ $ambulance->no }}</td>
                                     <td>
                                         <div class="row">

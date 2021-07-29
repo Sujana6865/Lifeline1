@@ -15,6 +15,7 @@
          </div>
          <div class="col-sm-2 mt-sm-3 float-right">
              <a href="/user/{{ $user->id }}" style="text-decoration: none;" >View Details</a>
+             <a href="/msg/create">Message</a>
          </div>
     </div> 
     @endforeach
