@@ -31,8 +31,19 @@
                             <div class="navbar-nav">
                                 <a class="nav-link" href="/" style="color: brown;">Home</a>
                                 <a class="nav-link" href="/finddonor" style="color: brown;">Find Donor</a>
-                                <a class="nav-link " href="/login" style="color: brown;">Log In</a>
-                                <a class="nav-link" href="/userregister" style="color: brown;">Register</a>
+                                @if (Route::has('login'))
+                                    <div class="hidden fixed top-0 right-0 px-6 py-4 sm:block">
+                                        @auth
+                                            <a href="{{ url('/home') }}" class="text-sm text-gray-700 underline">Home</a>
+                                        @else
+                                            <a href="{{ route('login') }}" class="text-sm text-gray-700 underline">Log in</a>
+
+                                            @if (Route::has('register'))
+                                                <a href="{{ route('register') }}" class="ml-4 text-sm text-gray-700 underline">Register</a>
+                                            @endif
+                                        @endauth
+                                    </div>
+                                @endif
                             </div>  
                         </div>
                         </nav> 
