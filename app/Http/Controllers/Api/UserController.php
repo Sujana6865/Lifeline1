@@ -20,6 +20,23 @@ class UserController extends Controller
         return $users;
     }
 
+    public function search(Request $request){
+        // return $request;
+        $user = $request->user;
+        $userQuery = User::where('blood',$request->blood);
+        if($user){
+            $userQuery->whereKeyNot($user->id);
+        }
+        if($request->location){
+            $userQuery->where('location', 'LIKE', '%'.$request->location.'%');
+        }
+        $users = $userQuery->get();
+        return response()->json($users);
+    }
+    
+
+   
+
     /**
      * Store a newly created resource in storage.
      *

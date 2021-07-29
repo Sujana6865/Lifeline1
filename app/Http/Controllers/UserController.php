@@ -58,10 +58,11 @@ class UserController extends Controller
     public function show($id)
     {
         $user = User::find($id);
-        return view('frontend.user.show',compact('user'));
+        return view('frontend.user.profile',compact('user'));
     }
 
-    public function search(Request $request){
+ 
+     public function search(Request $request){
         $user = $request->user;
         $userQuery = User::where('blood',$request->blood);
         if($user){
@@ -73,6 +74,7 @@ class UserController extends Controller
         $users = $userQuery->get();
         return view('frontend.user.index',compact('users'));
     }
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                          
 
     /**
      * Show the form for editing the specified resource.
