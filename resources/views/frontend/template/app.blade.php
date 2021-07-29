@@ -17,17 +17,32 @@
 
 </head>
 <body>
-    <div class="container">
+    <div class="container-fluid">
         <div class="row" style="height:100vh">
-            <div class="first col-5 mh-100" >
-                <div class="logo p-md-5 text-center">
-                    <a href="/"><img src="" alt=""><h1>LifeLine</h1></a>
-                </div>
+            <div class="first col-5 mh-100 text-center pt-sm-5" >
+                <a href="/"><img src="{{ asset('images/logowhite.png') }}" alt="" style="height: 100px;width:300px;" ></a>
             </div>
-            <div class="col-7 py-sm-5">
-                @yield('content')
+            
+            <div class="col-7 pt-sm-5">
+                
+                    <div class="navbar1 float-right">
+                        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+                        <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+                            <div class="navbar-nav">
+                                <a class="nav-link" href="/" style="color: brown;">Home</a>
+                                <a class="nav-link" href="/finddonor" style="color: brown;">Find Donor</a>
+                                <a class="nav-link " href="/login" style="color: brown;">Log In</a>
+                                <a class="nav-link" href="/userregister" style="color: brown;">Register</a>
+                            </div>  
+                        </div>
+                        </nav> 
+                    </div>
+                        
+                    @yield('content')
+                
             </div>
         </div>
     </div>
+   
 </body>
 </html>
