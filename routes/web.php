@@ -29,10 +29,6 @@ Route::get('/finddonor', function () {
     return view('frontend.finddonor.fdonor');
 });
 
-Route::get('/donor', function () {
-    return view('frontend.user.index');
-});
-
 
 
 Auth::routes();

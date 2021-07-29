@@ -46,7 +46,7 @@ class UserController extends Controller
         $users->location = $request->location;
         $users->is_admin = $request->is_admin;
         $users->save();
-        return redirect('user');
+        return redirect('login');
     }
 
     /**
@@ -70,7 +70,7 @@ class UserController extends Controller
             $userQuery->where('location', 'LIKE', '%'.$request->location.'%');
         }
         $users = $userQuery->get();
-        return view('frontend.client.index',compact('users'));
+        return view('frontend.user.index',compact('users'));
     }
 
     /**

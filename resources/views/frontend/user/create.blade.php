@@ -29,7 +29,11 @@
                
                 <div class="form-group ">
                     <label for="location">Location</label>
-                    <input id="location" class="form-control" type="text" name="location">
+                    <select id="location" class="form-control" name="location">
+                        <option value="Dharan">Dharan</option>
+                        <option value="Itahari">Itahari</option>
+                        <option value="Biratnagar">Biratnagar</option>
+                    </select>
                 </div>
                 <div class="form-group ">
                     <label for="mobile">Phone Number</label>

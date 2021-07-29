@@ -7,7 +7,7 @@
             Find blood donor quickly and easily right from the palm of your hand.
         </p>
         <div>
-            <form action="" method="post">
+            <form action="user/search">
             @csrf
            <!--
             <div class="form-group">
@@ -45,9 +45,7 @@
             -->
             <div class="row">
                 <div class="col-md-3">
-                    <a href="/donor">
-                        <button type="submit" class="newbutton  px-md-4">Search</button>
-                    </a>
+                   <button type="submit" class="newbutton  px-md-4">Search</button>
                 </div>
                 <div class="col-md-9">
                     <a href="/">
