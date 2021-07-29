@@ -35,10 +35,10 @@
                                     <td>
                                         <div class="row">
                                             <div class="col-2">
-                                                <a href="/bbank/{{ $bbank->id }}/edit" class="btn btn-success">edit</a>
+                                                <a href="/bbank/{{ $bbank->id }}/edit" class="btn btn-success">Edit</a>
                                             </div>
                                             <div class="col-2">
-                                                <a href="/bbank/{{ $bbank->id }}" class="btn btn-primary">show</a>
+                                                <a href="/bbank/{{ $bbank->id }}" class="btn btn-primary">Show</a>
                                             </div>
                                             <div class="col-2">
                                                 <form action="/bbank/{{ $bbank->id }}" method="post">

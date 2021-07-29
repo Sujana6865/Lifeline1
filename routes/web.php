@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\AmbulanceController;
 use App\Http\Controllers\BloodbankController;
+use App\Http\Controllers\MsgController;
 use App\Http\Controllers\UserController;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;

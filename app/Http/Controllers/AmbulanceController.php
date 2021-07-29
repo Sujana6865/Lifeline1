@@ -37,6 +37,8 @@ class AmbulanceController extends Controller
     public function store(Request $request)
     {
         $ambulance = new Ambulance();
+        $ambulance->name = $request->name;
+        $ambulance->location = $request->location;
         $ambulance->no = $request->no;
         $ambulance->save();
         return redirect()->back();
@@ -53,6 +55,7 @@ class AmbulanceController extends Controller
         //
     }
 
+
     /**
      * Show the form for editing the specified resource.
      *
@@ -62,7 +65,7 @@ class AmbulanceController extends Controller
     public function edit($id)
     {
         $ambulance = Ambulance::find($id);
-        return view('backend.bloodbank.edit',compact('ambulance'));
+        return view('backend.ambulance.edit',compact('ambulance'));
     }
 
     /**
@@ -75,6 +78,8 @@ class AmbulanceController extends Controller
     public function update(Request $request, $id)
     {
         $ambulance = Ambulance::find($id);
+        $ambulance->name = $request->name;
+        $ambulance->location = $request->location;
         $ambulance->no = $request->no;
         $ambulance->update();
         return redirect()->back();

@@ -11,11 +11,19 @@
             <div class="col-md-7">
                 <div class="card">
                     <div class="card-header">
-                        <div class="btn btn-danger"><i class="fas fa-plus-circle"></i> Add New</div>
+                        <div class="btn btn-danger"><i class="fas fa-plus-circle"></i> Add New Ambulance</div>
                     </div>
                     <div class="card-body">
                         <form action="/ambulance" method="post">
                             @csrf
+                            <div class="form-group">
+                                <label for="name">Hospital Name</label>
+                                <input id="name" class="form-control" type="text" name="name">
+                            </div>
+                            <div class="form-group">
+                                <label for="location">Location</label>
+                                <input id="location" class="form-control" type="text" name="location">
+                            </div>
                             <div class="form-group">
                                 <label for="no">Phone No.</label>
                                 <input id="no" class="form-control" type="text" name="no">

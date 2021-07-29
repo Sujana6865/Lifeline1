@@ -11,6 +11,14 @@
                         <form action="/ambulance/{{ $ambulance->id }}" method="post">
                             @csrf
                             <div class="form-group">
+                                <label for="name">Name</label>
+                                <input id="name" class="form-control" type="text" name="name" value="{{ $ambulance->name }}">
+                            </div>
+                            <div class="form-group">
+                                <label for="location">Location</label>
+                                <input id="location" class="form-control" type="text" name="location" value="{{ $ambulance->location }}">
+                            </div>
+                            <div class="form-group">
                                 <label for="no">Phone No.</label>
                                 <input id="no" class="form-control" type="text" name="no" value="{{ $ambulance->no }}">
                             </div>
