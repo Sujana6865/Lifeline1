@@ -48,9 +48,7 @@
                    <button type="submit" class="newbutton  px-md-4">Search</button>
                 </div>
                 <div class="col-md-9">
-                    <a href="/">
-                        <button type="submit" class="newbutton px-md-4">Cancel</button>
-                    </a>
+                    <a href="/" class="newbutton px-sm-5" style="text-decoration: none;">Cancel</a>
                 </div>
             </div>
         </form>
