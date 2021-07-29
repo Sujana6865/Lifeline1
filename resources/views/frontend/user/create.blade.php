@@ -1,13 +1,13 @@
 @extends('frontend.template.app')
 
 @section('content')
-    <div class=" p-md-5">
+    <div class="m-sm-5">
         <h3>Register Now</h3>
         <p>
             Register and be life savier
         </p>
         <div>
-            <form action="user" method="post">
+            <form action="/user" method="post">
                 @csrf
                 <div class="form-group">
                     <label for="name">Name</label>

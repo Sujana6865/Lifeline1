@@ -23,45 +23,72 @@
                 <a href="/"><img src="{{ asset('images/logowhite.png') }}" alt="" class="img-fluid" style="height: 100px;width:300px;" ></a>
             </div>
             
-            <div class="col-7 pt-sm-5 mh-100">
-                
-                    <div class="navbar1 float-right">
-                        <nav class="navbar navbar-expand-lg navbar-light bg-light">
-                        <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
-                            <div class="navbar-nav">
-                                <a class="nav-link" href="/" style="color: brown;">Home</a>
-                                <a class="nav-link" href="/finddonor" style="color: brown;">Find Donor</a>
-                                @if (Route::has('login'))
-                                    <div class="hidden fixed top-0 right-0 px-6 py-4 sm:block">
-                                        @auth
-                                            <a href="{{ url('/') }}" class="text-sm text-gray-700 underline">Home</a>
-                                            <a class="nav-link" href="{{ route('logout') }}"
-                                                onclick="event.preventDefault();
-                                                                document.getElementById('logout-form').submit();">
-                                                                <i class="nav-icon fas fa-sign-out-alt"></i>
-                                                {{ __('Logout') }}
-                                            </a>
-
-                                            <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
-                                                    @csrf
-                                            </form>
-
-                                        @else
-                                            <a href="{{ route('login') }}" class="text-sm text-gray-700 underline">Log in</a>
-
-                                            @if (Route::has('register'))
-                                                <a href="{{ route('register') }}" class="ml-4 text-sm text-gray-700 underline">Register</a>
-                                            @endif
-                                        @endauth
-                                    </div>
-                                @endif
-                            </div>  
-                        </div>
-                        </nav> 
-                    </div>
+            <div class="col-7 mh-100">
+                <nav class="navbar-light bg-light ml-sm-4 float-right">
                         
-                    @yield('content')
+                            @if (Route::has('login'))
+                                <div class="hidden fixed top-0 right-0 px-6 py-4 sm:block">
+                                    @auth
+                                        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+                                            <ul class="navbar-nav">
+                                                <li class="nav-item">
+                                                    <a class="nav-link" href="{{ url('/') }}" class="text-sm text-gray-700 underline" style="color: brown;">Home</a>
+
+                                                </li>
+                                                <li class="nav-item">
+                                                    <a class="nav-link" href="/finddonor" style="color: brown;">Find Donor</a>
+
+                                                </li>
+                                                <li class="nav-item">
+                                                    <a class="nav-link" href="{{ route('logout') }}"
+                                                    onclick="event.preventDefault();
+                                                    document.getElementById('logout-form').submit();">
+                                                    <i class="nav-icon fas fa-sign-out-alt"></i>
+                                                    {{ __('Logout') }}
+                                                    </a>
+                                                    <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
+                                                        @csrf
+                                                    </form>
+                                                </li>
+                                            </ul>
+                                        </nav>  
+                                        
+
+                                       
+
+                                    @else
+                                        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+                                            <ul class="navbar-nav">
+                                                <li class="nav-item">
+                                                    <a class="nav-link" href="{{ url('/') }}" class="text-sm text-gray-700 underline" style="color: brown;">Home</a>
+
+                                                </li>
+                                                <li class="nav-item">
+                                                    <a class="nav-link" href="/finddonor" style="color: brown;">Find Donor</a>
+
+                                                </li>
+                                                <li class="nav-item p-sm-2">
+                                                    <a href="{{ route('login') }}" class="text-sm text-gray-700 underline ">Log in</a>
+                                                </li>
+                                                <li class="nav-item pt-sm-2">
+                                                    @if (Route::has('register'))
+                                                        <a href="{{ route('user.create') }}" class="ml-4 text-sm text-gray-700 underline">Register</a>
+                                                    @endif
+                                                </li>
+                                            </ul>
+                                        </nav>
+                                    @endauth
+                                </div>
+                            @endif
+                        
+                </nav>
+
                 
+                <div>
+                    @yield('content')
+                </div>
+                       
+               
             </div>
         </div>
     </div>
