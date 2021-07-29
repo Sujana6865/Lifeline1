@@ -20,7 +20,7 @@
     <div class="container-fluid">
         <div class="row" style="height:100vh">
             <div class="first col-5 mh-100 text-center pt-sm-5" >
-                <a href="/"><img src="{{ asset('images/logowhite.png') }}" alt="" style="height: 100px;width:300px;" ></a>
+                <a href="/"><img src="{{ asset('images/logowhite.png') }}" alt="" class="img-fluid" style="height: 100px;width:300px;" ></a>
             </div>
             
             <div class="col-7 pt-sm-5">

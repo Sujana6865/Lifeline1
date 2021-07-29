@@ -45,7 +45,7 @@
             -->
             <div class="row">
                 <div class="col-md-3">
-                    <a href="">
+                    <a href="/donor">
                         <button type="submit" class="newbutton  px-md-4">Search</button>
                     </a>
                 </div>
