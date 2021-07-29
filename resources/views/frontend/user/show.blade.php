@@ -4,7 +4,7 @@
     <div>
         <h3>User Information</h3>
         <address>
-            User:{{ $user->name }} <br>
+            Name:{{ $user->name }} <br>
             Location:{{ $user->location }} <br>
             Blood Group: {{ $user->blood }} <br>
             Phone No.:{{ $user->mobile }}
