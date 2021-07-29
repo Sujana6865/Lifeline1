@@ -23,7 +23,7 @@
                 <a href="/"><img src="{{ asset('images/logowhite.png') }}" alt="" class="img-fluid" style="height: 100px;width:300px;" ></a>
             </div>
             
-            <div class="col-7 pt-sm-5">
+            <div class="col-7 pt-sm-5 mh-100">
                 
                     <div class="navbar1 float-right">
                         <nav class="navbar navbar-expand-lg navbar-light bg-light">
