@@ -31,7 +31,7 @@ class LoginController extends Controller
     {
         $user = Auth::user();
         if($user->is_admin){
-            return '/dashboard';
+            return '/home';
         }
         return '/';
     }

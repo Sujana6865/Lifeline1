@@ -34,9 +34,13 @@ Route::get('/donorlist', function () {
 });
 
 
+
 Auth::routes();
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+
+// usersearch
+Route::get('user/search', [UserController::class,'search']);
 
 // usercontroller
 Route::resource('user', UserController::class);
