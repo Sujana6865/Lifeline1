@@ -1,11 +1,8 @@
 @extends('frontend.template.app')
 
 @section('content')
-    <a href="/">
-        <button type="button" class="float-right btn btn-light">Back</button>
-    </a>
     <div class=" p-md-5">
-        <h2>Register Now</h2>
+        <h3>Register Now</h3>
         <p>
             Register and be life savier
         </p>

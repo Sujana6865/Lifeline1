@@ -1,11 +1,8 @@
 @extends('frontend.template.app')
 
 @section('content')
-    <a href="/userregister">
-        <button type="button" class="float-right btn btn-light">Register Now</button>
-    </a>
-    <div class=" p-md-5">
-        <h2>FIND DONOR</h2>
+    <div class="mt-sm-5 p-sm-5">
+        <h3>FIND DONOR</h3>
         <p>
             Find blood donor quickly and easily right from the palm of your hand.
         </p>
@@ -48,7 +45,7 @@
             -->
             <div class="row">
                 <div class="col-md-3">
-                    <a href="/donorlist">
+                    <a href="">
                         <button type="submit" class="newbutton  px-md-4">Search</button>
                     </a>
                 </div>
