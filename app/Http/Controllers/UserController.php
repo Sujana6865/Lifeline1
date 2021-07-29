@@ -57,7 +57,8 @@ class UserController extends Controller
      */
     public function show($id)
     {
-        //
+        $user = User::find($id);
+        return view('frontend.user.show',compact('user'));
     }
 
     public function search(Request $request){
