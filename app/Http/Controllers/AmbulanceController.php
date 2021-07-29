@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Ambulance;
 use Illuminate\Http\Request;
 
 class AmbulanceController extends Controller
@@ -13,7 +14,8 @@ class AmbulanceController extends Controller
      */
     public function index()
     {
-        //
+        $ambulances = Ambulance::all();
+        return view('backend.ambulance.index',compact('ambulances'));
     }
 
     /**
@@ -23,7 +25,7 @@ class AmbulanceController extends Controller
      */
     public function create()
     {
-        //
+        return view('backend.ambulance.create');
     }
 
     /**
@@ -34,7 +36,10 @@ class AmbulanceController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $ambulance = new Ambulance();
+        $ambulance->no = $request->no;
+        $ambulance->save();
+        return redirect()->back();
     }
 
     /**
@@ -56,7 +61,8 @@ class AmbulanceController extends Controller
      */
     public function edit($id)
     {
-        //
+        $ambulance = Ambulance::find($id);
+        return view('backend.bloodbank.edit',compact('ambulance'));
     }
 
     /**
@@ -68,7 +74,10 @@ class AmbulanceController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        $ambulance = Ambulance::find($id);
+        $ambulance->no = $request->no;
+        $ambulance->update();
+        return redirect()->back();
     }
 
     /**
@@ -79,6 +88,8 @@ class AmbulanceController extends Controller
      */
     public function destroy($id)
     {
-        //
+        $ambulance = Ambulance::find($id);
+        $ambulance->delete();
+        return redirect('/ambulance');
     }
 }

@@ -60,6 +60,19 @@ class UserController extends Controller
         //
     }
 
+    public function search(Request $request){
+        $user = $request->user;
+        $userQuery = User::where('blood',$request->blood);
+        if($user){
+            $userQuery->whereKeyNot($user->id);
+        }
+        if($request->location){
+            $userQuery->where('location', 'LIKE', '%'.$request->location.'%');
+        }
+        $users = $userQuery->get();
+        return view('frontend.client.index',compact('users'));
+    }
+
     /**
      * Show the form for editing the specified resource.
      *
