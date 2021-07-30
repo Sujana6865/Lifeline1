@@ -35,6 +35,7 @@
                                                     <a class="nav-link" href="{{ url('/') }}" class="text-sm text-gray-700 underline" style="color: brown;">Home</a>
 
                                                 </li>
+                                               
                                                 <li class="nav-item">
                                                     <a class="nav-link" href="" class="text-sm text-gray-700 underline" style="color: brown;">Profile</a>
 
@@ -91,10 +92,21 @@
                 <div>
                     @yield('content')
                 </div>
-                       
+
+               
+                
                
             </div>
+            
+                 
         </div>
+
+        <div >
+            <p class="text-center">
+                <strong>Copyright &copy; 2020-2021</strong>
+            </p>
+        </div>
+    
     </div>
    
 </body>

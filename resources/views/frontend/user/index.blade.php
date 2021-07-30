@@ -10,12 +10,12 @@
     @foreach ($users as $user)
     <div class="row mt-sm-5 border">
          <div class="col-10 float-left">
-             <h3>{{ $user->name }}</h3><br>
-             <h3>{{ $user->blood }}</h3>
+             <h5>{{ $user->name }}</h5>
+             <h5>{{ $user->blood }}</h5>
          </div>
          <div class="col-sm-2 mt-sm-3 float-right">
              <a href="/user/{{ $user->id }}" style="text-decoration: none;" >View Details</a>
-             <a href="/msg/create">Message</a>
+             
          </div>
     </div> 
     @endforeach

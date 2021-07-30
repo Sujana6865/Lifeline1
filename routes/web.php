@@ -19,8 +19,13 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return view('frontend.dashboard');
+    return view('frontend.welcome');
 });
+
+Route::get('/dashboard', function () {
+    return view('frontend.dashboard.app');
+});
+
 
 Route::get('/userregister', function () {
     return view('frontend.user.create');
@@ -29,7 +34,6 @@ Route::get('/userregister', function () {
 Route::get('/finddonor', function () {
     return view('frontend.finddonor.fdonor');
 });
-
 
 
 
