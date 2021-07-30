@@ -18,6 +18,12 @@ class AmbulanceController extends Controller
         return view('backend.ambulance.index',compact('ambulances'));
     }
 
+    public function page()
+    {
+        $ambulances = Ambulance::all();
+        return view('frontend.dashboard.app',compact('ambulances'));
+    }
+
     /**
      * Show the form for creating a new resource.
      *
