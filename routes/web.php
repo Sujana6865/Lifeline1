@@ -52,7 +52,7 @@ Route::get('user/search', [UserController::class,'search']);
 Route::resource('user', UserController::class);
 
 // AmbulancePage
-Route::get('page', [AmbulanceController::class,'page']);
+Route::get('ambulance/page', [AmbulanceController::class,'page']);
 
 // ambulancecontroller
 Route::resource('ambulance', AmbulanceController::class);

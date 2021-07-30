@@ -21,7 +21,7 @@ class AmbulanceController extends Controller
     public function page()
     {
         $ambulances = Ambulance::all();
-        return view('backend.ambulance.page',compact('ambulances'));
+        return view('frontend.dashboard.app',compact('ambulances'));
     }
 
     /**
