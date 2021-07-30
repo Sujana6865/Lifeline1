@@ -47,8 +47,8 @@
                 <div class="col-md-3">
                    <button type="submit" class="newbutton  px-md-4">Search</button>
                 </div>
-                <div class="col-md-9">
-                    <a href="/" class="newbutton px-sm-5" style="text-decoration: none;">Cancel</a>
+                <div class="col-md-9 mt-sm-2">
+                    <a href="/" class="newbutton px-sm-4 py-sm-2" style="text-decoration: none; color:white;">Cancel</a>
                 </div>
             </div>
         </form>
