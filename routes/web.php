@@ -51,6 +51,8 @@ Route::get('user/search', [UserController::class,'search']);
 // usercontroller
 Route::resource('user', UserController::class);
 
+// AmbulancePage
+Route::get('page', [AmbulanceController::class,'page']);
 
 // ambulancecontroller
 Route::resource('ambulance', AmbulanceController::class);

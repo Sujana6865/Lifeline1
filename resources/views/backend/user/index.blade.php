@@ -38,9 +38,6 @@
                                     <td>{{ $user->mobile }}</td>
                                     <td>{{ $user->email }}</td>
                                     <td style="display: inline-flex">
-                                        <div class="col-2">
-                                            <a href="user/{{ $user->id }}/edit" class="btn btn-outline-secondary">Edit</a>
-                                        </div>
                                         <div class="col-2 ml-4">
                                             <form action="/user/{{ $user->id }}" method="post">
                                                 @csrf

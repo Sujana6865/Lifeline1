@@ -12,7 +12,7 @@
                             @csrf
                             @method('put')
                             <div class="form-group">
-                                <label for="name">Name</label>
+                                <label for="name">Hospital Name</label>
                                 <input id="name" class="form-control" type="text" name="name" value="{{ $ambulance->name }}">
                             </div>
                             <div class="form-group">
