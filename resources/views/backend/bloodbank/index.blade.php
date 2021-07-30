@@ -35,16 +35,13 @@
                                     <td>
                                         <div class="row">
                                             <div class="col-2">
-                                                <a href="/bbank/{{ $bbank->id }}/edit" class="btn btn-success">Edit</a>
-                                            </div>
-                                            <div class="col-2">
-                                                <a href="/bbank/{{ $bbank->id }}" class="btn btn-primary">Show</a>
+                                                <a href="/bbank/{{ $bbank->id }}/edit" class="btn btn-outline-secondary">Edit</a>
                                             </div>
                                             <div class="col-2">
                                                 <form action="/bbank/{{ $bbank->id }}" method="post">
                                                     @csrf
                                                     @method('delete')
-                                                    <button type="submit" class="btn btn-danger">Delete</button>
+                                                    <button type="submit" class="btn btn-outline-danger">Delete</button>
                                                 </form>
                                             </div>
                                         </div>

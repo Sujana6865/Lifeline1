@@ -42,7 +42,7 @@ class BloodbankController extends Controller
         $bbank->no = $request->no;
         $bbank->location = $request->location;
         $bbank->save();
-        return redirect()->back();
+        return redirect('/bbank');
     }
 
     /**
@@ -83,7 +83,7 @@ class BloodbankController extends Controller
         $bbank->no = $request->no;
         $bbank->location = $request->location;
         $bbank->update();
-        return redirect()->back();
+        return redirect('/bbank');
     }
 
     /**

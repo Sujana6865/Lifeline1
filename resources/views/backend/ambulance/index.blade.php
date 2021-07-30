@@ -35,7 +35,7 @@
                                     <td>
                                         <div class="row">
                                             <div class="col-2">
-                                                <a href="/ambulance/{{ $ambulance->id }}/edit" class="btn btn-success">edit</a>
+                                                <a href="/ambulance/{{ $ambulance->id }}/edit" class="btn btn-outline-secondary">edit</a>
                                             </div>
                                             <div class="col-2">
                                                 <form action="/ambulance/{{ $ambulance->id }}" method="post">
