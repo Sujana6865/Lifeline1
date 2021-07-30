@@ -5,7 +5,7 @@
             <div class="col-md-7">
                 <div class="card">
                     <div class="card-header">
-                        <a href="/bbank" class="btn btn-danger btn-sm">Back</a>
+                        <div class="btn btn-danger"><i class="nav-icon fas fa-tint"></i> Edit Blood Bank</div>
                     </div>
                     <div class="card-body">
                         <form action="/bbank/{{ $bbank->id }}" method="post">
@@ -24,6 +24,7 @@
                                 <input id="no" class="form-control" type="text" name="no" value="{{ $bbank->no }}">
                             </div>
                             <button type="submit" class="btn btn-danger">Save</button>
+                            <a href="/bbank" class="btn btn-outline-secondary">Cancel</a>
                         </form>
                     </div>
                 </div>

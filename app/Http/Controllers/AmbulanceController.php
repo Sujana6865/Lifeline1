@@ -41,7 +41,7 @@ class AmbulanceController extends Controller
         $ambulance->location = $request->location;
         $ambulance->no = $request->no;
         $ambulance->save();
-        return redirect()->back();
+        return redirect('/ambulance');
     }
 
     /**
@@ -82,7 +82,7 @@ class AmbulanceController extends Controller
         $ambulance->location = $request->location;
         $ambulance->no = $request->no;
         $ambulance->update();
-        return redirect()->back();
+        return redirect('/ambulance');
     }
 
     /**

@@ -29,6 +29,7 @@
                                 <input id="no" class="form-control" type="text" name="no">
                             </div>
                             <button type="submit" class="btn btn-danger">Save</button>
+                            <a href="/ambulance" class="btn btn-outline-secondary">Cancel</a>
                         </form>
                     </div>
                 </div>

@@ -37,9 +37,17 @@
                                     <td>{{ $user->location }}</td>
                                     <td>{{ $user->mobile }}</td>
                                     <td>{{ $user->email }}</td>
-                                    <td>
-                                        <a href="" class="btn btn-success">edit</a>
-                                        <a href="" class="btn btn-primary">show</a>
+                                    <td style="display: inline-flex">
+                                        <div class="col-2">
+                                            <a href="user/{{ $user->id }}/edit" class="btn btn-outline-secondary">Edit</a>
+                                        </div>
+                                        <div class="col-2 ml-4">
+                                            <form action="/user/{{ $user->id }}" method="post">
+                                                @csrf
+                                                @method('delete')
+                                                <button type="submit" class="btn btn-outline-danger">Delete</button>
+                                            </form>
+                                        </div>
                                     </td>
                                 </tr>
                                 
